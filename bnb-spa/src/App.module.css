@@ -22,10 +22,11 @@
 .logo{
   width: 50%;
   height: 100%;
-  padding-top: 10px;
+  padding-top: 0px;
   padding-left: 10px;
   display: flex;
   align-items: center;
+  z-index: 10;
 }
 .foto{
   height: 50%;
@@ -37,12 +38,12 @@
   height: 60%;
   position: absolute;
   right: 5px;
-  bottom: 0px;
+  top: 0px;
   align-items: center;
-
+  z-index: 10;
 }
 h5{
-  color: white;
+  color: #0F1C30;
   padding-left: 7px;
 }
 .ubi{
@@ -71,7 +72,7 @@ h5{
 
 .subtitulo{
   position: relative;
-  width: 95%;
+  width: 93%;
   margin: 0;
   margin-left: 5%;
   padding: 0%;
@@ -79,6 +80,7 @@ h5{
 }
 .pregunta{
   color: #668dc0;
+  font-size: large;
 }
 
 
@@ -94,6 +96,7 @@ h5{
   align-items: center;
   justify-content: center;
   margin-top: 5vh;
+
 }
 
 
@@ -168,4 +171,77 @@ h5{
   bottom: 0px;
   width: 100%;
   height: 50%;
+}
+.banner2{
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 40%;
+  z-index: 1;
+}
+
+
+
+/*//////   EFECTO /////////*/
+/* Animación de fadeIn */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplicación de la animación a los elementos */
+.titulo {
+  animation: fadeIn 2s ease forwards; /* Duración y dirección de la animación */
+  opacity: 0; /* Inicialmente invisible para que la animación funcione */
+}
+
+.carouselContainer {
+  animation: fadeIn 8s ease forwards; /* Duración y dirección de la animación */
+  opacity: 0; /* Inicialmente invisible para que la animación funcione */
+}
+
+.banner2{
+  animation: fadeIn 5s ease forwards; /* Duración y dirección de la animación */
+  opacity: 0; /* Inicialmente invisible para que la animación funcione */
+}
+
+.banner{
+  animation: fadeOut 5s ease forwards; /* Duración y dirección de la animación */
+  opacity: 0; /* Inicialmente invisible para que la animación funcione */
+}
+
+.ubi{
+  animation: fade 8s ease forwards; /* Duración y dirección de la animación */
+  opacity: 0; /* Inicialmente invisible para que la animación funcione */
+}
+
+.contacto{
+  animation: fade 10s ease forwards; /* Duración y dirección de la animación */
+  opacity: 0; /* Inicialmente invisible para que la animación funcione */
 }
