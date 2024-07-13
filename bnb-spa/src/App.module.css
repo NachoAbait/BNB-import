@@ -37,7 +37,7 @@
   width: 33%;
   height: 60%;
   position: absolute;
-  right: 5px;
+  right: 1px;
   top: 0px;
   align-items: center;
   z-index: 10;
@@ -148,12 +148,12 @@ h5{
 .carouselContainer{
   background-color: aliceblue;
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   left: 0%;
   right: 0%;
   margin: auto;
-  width: 60%;
-  height: 25vh;
+  width: 70%;
+  height: 30vh;
   z-index: 99;
   overflow: hidden;
   border-radius: 10px;

@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import logo from "./img/logo.png";
 import Banner from "./img/banner.png";
-import Imagen1 from "./img/img1.jpg";
+import Imagen1 from "./img/img1.png";
 import Imagen2 from "./img/img2.png";
+import Imagen3 from "./img/img3.png";
+import Imagen4 from "./img/img4.png";
+import Imagen5 from "./img/img5.png"
 import olas2 from "./img/olas2.png";
 import css from "./App.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,7 +16,9 @@ function App() {
   const carouselImages = [
     Imagen1,
     Imagen2,
-    "https://via.placeholder.com/800x400?text=Image+3",
+    Imagen3,
+    Imagen4,
+    Imagen5
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -21,9 +26,9 @@ function App() {
   const [isTimerContacto, setIsTimerContacto] = useState(false);
   const [typedInitialText, setTypedInitialText] = useState("");
   const [typedRemainingText, setTypedRemainingText] = useState("");
-  const initialText = "¿Buscas productos Apple o Samsung a precios accesibles?";
+  const initialText = "¿Buscas productos Apple a precios accesibles?";
   const remainingText =
-    "En BNB te traemos el dispositivo que quieras, al mejor precio.";
+    "En BNB te traemos el dispositivo que quieras, sellado y con garantia oficial.";
 
   useEffect(() => {
     let index = 0;
@@ -78,7 +83,7 @@ function App() {
   }, [carouselImages.length]);
 
   const handleRedirect = () => {
-    window.location.href = "https://bnb-import.up.railway.app/";
+    window.location.href = "https://drive.google.com/drive/folders/1sSEkbf6b3hWbBJ4wtvOKCzlO6OtNI1tE?usp=sharing";
   };
 
   return (
