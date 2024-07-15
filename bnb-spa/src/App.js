@@ -136,7 +136,7 @@ function App() {
               />
             </div>
           </div>
-          <div className={css.contacto2} onClick={handleRedirect}>
+          <div className={`${css.contacto2} ${isClicked ? css.clicked : ""}`} onClick={handleRedirect}>
             <div className={css.red}>Lista de precios</div>
           </div>
           <div className={css.contacto1}>
