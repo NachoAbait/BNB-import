@@ -96,7 +96,7 @@ h5{
   align-items: center;
   justify-content: center;
   margin-top: 5vh;
-
+  position: relative;
 }
 
 
@@ -133,6 +133,20 @@ h5{
   align-items: center;
   justify-content: center;
 }
+.contacto2 {
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.contacto2:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.contacto2.clicked {
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}
+
 .red{
   font-size: medium;
   font-weight: bold;
@@ -147,14 +161,14 @@ h5{
 
 .carouselContainer{
   background-color: aliceblue;
-  position: absolute;
-  bottom: 5%;
+  position: relative;
   left: 0%;
   right: 0%;
   margin: auto;
-  width: 70%;
-  height: 30vh;
+  width: 60%;
+  height: 25vh;
   z-index: 99;
+  margin-top: 40px;
   overflow: hidden;
   border-radius: 10px;
 }

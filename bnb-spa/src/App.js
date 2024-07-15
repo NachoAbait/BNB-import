@@ -26,9 +26,11 @@ function App() {
   const [isTimerContacto, setIsTimerContacto] = useState(false);
   const [typedInitialText, setTypedInitialText] = useState("");
   const [typedRemainingText, setTypedRemainingText] = useState("");
+  const [isClicked, setIsClicked] = useState(false);
+
   const initialText = "¿Buscas productos Apple a precios accesibles?";
   const remainingText =
-    "En BNB te traemos el dispositivo que quieras, sellado y con garantia oficial.";
+    "BNB te trae el dispositivo que quieras, sellado con garantia oficial.";
 
   useEffect(() => {
     let index = 0;
@@ -41,7 +43,7 @@ function App() {
           clearInterval(interval);
           typeRemainingText(); // Iniciar el tipeo del remainingText
         }
-      }, 30); // Ajusta la velocidad del tipeo según tu preferencia
+      }, 25); // Ajusta la velocidad del tipeo según tu preferencia
     };
 
     const typeRemainingText = () => {
@@ -53,7 +55,7 @@ function App() {
         } else {
           clearInterval(interval);
         }
-      }, 50); // Ajusta la velocidad del tipeo según tu preferencia
+      }, 30); // Ajusta la velocidad del tipeo según tu preferencia
     };
 
     typeInitialText();
@@ -83,7 +85,10 @@ function App() {
   }, [carouselImages.length]);
 
   const handleRedirect = () => {
-    window.location.href = "https://drive.google.com/drive/folders/1sSEkbf6b3hWbBJ4wtvOKCzlO6OtNI1tE?usp=sharing";
+    setIsClicked(true);
+    setTimeout(() => {
+      window.location.href = "https://drive.google.com/drive/folders/1sSEkbf6b3hWbBJ4wtvOKCzlO6OtNI1tE?usp=sharing";
+    }, 150); // Añade un retraso antes de la redirección para permitir que el efecto se vea
   };
 
   return (
