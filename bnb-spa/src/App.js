@@ -84,12 +84,7 @@ function App() {
     return () => clearInterval(interval);
   }, [carouselImages.length]);
 
-  const handleRedirect = () => {
-    setIsClicked(true);
-    setTimeout(() => {
-      window.location.href = "https://drive.google.com/drive/folders/1sSEkbf6b3hWbBJ4wtvOKCzlO6OtNI1tE?usp=sharing";
-    }, 150); // Añade un retraso antes de la redirección para permitir que el efecto se vea
-  };
+
 
   return (
     <div className={css.container}>
