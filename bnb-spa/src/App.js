@@ -136,8 +136,14 @@ function App() {
               />
             </div>
           </div>
-          <div className={`${css.contacto2} ${isClicked ? css.clicked : ""}`} onClick={handleRedirect}>
-            <div className={css.red}>Lista de precios</div>
+          <div className={`${css.contacto2} ${isClicked ? css.clicked : ""}`}>
+            <a 
+              href="https://drive.google.com/drive/folders/1sSEkbf6b3hWbBJ4wtvOKCzlO6OtNI1tE?usp=sharing" 
+              className={css.link}
+              onClick={() => setIsClicked(true)}
+            >
+              <div className={css.red}>Lista de precios</div>
+            </a>
           </div>
           <div className={css.contacto1}>
             <div className={css.icono}>
