@@ -5,7 +5,7 @@ import Imagen1 from "./img/img1.png";
 import Imagen2 from "./img/img2.png";
 import Imagen3 from "./img/img3.png";
 import Imagen4 from "./img/img4.png";
-import Imagen5 from "./img/img5.png"
+import Imagen5 from "./img/img5.png";
 import olas2 from "./img/olas2.png";
 import css from "./App.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -84,7 +84,27 @@ function App() {
     return () => clearInterval(interval);
   }, [carouselImages.length]);
 
+  const handleRedirect = () => {
+    setIsClicked(true);
+    setTimeout(() => {
+      window.location.href = "https://drive.google.com/drive/folders/1sSEkbf6b3hWbBJ4wtvOKCzlO6OtNI1tE?usp=sharing";
+    }, 150); // Añade un retraso antes de la redirección para permitir que el efecto se vea
+  };
 
+  useEffect(() => {
+    const contactoElement = document.getElementById("contacto2");
+    if (contactoElement) {
+      contactoElement.addEventListener("click", handleRedirect);
+      contactoElement.addEventListener("touchstart", handleRedirect);
+    }
+
+    return () => {
+      if (contactoElement) {
+        contactoElement.removeEventListener("click", handleRedirect);
+        contactoElement.removeEventListener("touchstart", handleRedirect);
+      }
+    };
+  }, [isClicked]);
 
   return (
     <div className={css.container}>
@@ -131,14 +151,8 @@ function App() {
               />
             </div>
           </div>
-          <div className={`${css.contacto2} ${isClicked ? css.clicked : ""}`}>
-            <a 
-              href="https://www.youtube.com/" 
-              className={css.link}
-              onClick={() => setIsClicked(true)}
-            >
-              <div className={css.red}>Lista de precios</div>
-            </a>
+          <div id="contacto2" className={`${css.contacto2} ${isClicked ? css.clicked : ""}`}>
+            <div className={css.red}>Lista de precios</div>
           </div>
           <div className={css.contacto1}>
             <div className={css.icono}>
