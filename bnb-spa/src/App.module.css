@@ -256,6 +256,6 @@ h5{
 }
 
 .contacto{
-  animation: fade 10s ease forwards; /* Duración y dirección de la animación */
+  animation: fade 3s ease forwards; /* Duración y dirección de la animación */
   opacity: 0; /* Inicialmente invisible para que la animación funcione */
 }
